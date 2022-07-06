@@ -13,6 +13,13 @@ var SaveTheCity = function () {
     savedCityBtn.className = "btn"
     savedCityBtn.textContent = savedCity;
     savedCities.appendChild(savedCityBtn);
+
+    if (savedCityBtn.addEventListener("click", function (event) {
+        var cityClick = event.target.textContent
+        getUserWeather(cityClick);
+        getUserFutureWeather(cityClick);
+    }));
+
 }
 
 
